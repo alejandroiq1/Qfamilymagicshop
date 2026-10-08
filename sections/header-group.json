@@ -8,8 +8,8 @@
         "announcement_Nw7PEi": {
           "type": "_announcement",
           "settings": {
-            "text": "Please pardon our appearance while our website is under construction.",
-            "link": "",
+            "text": "Launch Special: The Q Family Magic Set — $40 (reg. $50). First 10 orders get a free card holder with code MAGICLAUNCH.",
+            "link": "shopify://products/the-q-family-magic-set",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
             "weight": "",
@@ -32,8 +32,7 @@
         "divider_color": "",
         "padding-block-start": 15,
         "padding-block-end": 15
-      },
-      "disabled": true
+      }
     },
     "header_section": {
       "type": "header",
