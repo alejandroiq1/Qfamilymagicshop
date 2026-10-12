@@ -18,10 +18,25 @@
             "text_color": ""
           },
           "blocks": {}
+        },
+        "announcement_freeship": {
+          "type": "_announcement",
+          "settings": {
+            "text": "Free US shipping on orders of $70 or more.",
+            "link": "shopify://policies/shipping-policy",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "weight": "",
+            "letter_spacing": "normal",
+            "case": "none",
+            "text_color": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "announcement_Nw7PEi"
+        "announcement_Nw7PEi",
+        "announcement_freeship"
       ],
       "name": "t:names.announcement_bar",
       "settings": {

@@ -327,10 +327,15 @@
                 "padding-inline-end": 10
               },
               "blocks": {}
+            },
+            "product_specs": {
+              "type": "product-specs",
+              "settings": {}
             }
           },
           "block_order": [
             "group_J87VfC",
+            "product_specs",
             "disclosures_n3qKam"
           ]
         }

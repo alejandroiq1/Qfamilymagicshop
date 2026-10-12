@@ -1,0 +1,38 @@
+{%- comment -%}
+  Product specs. Reads the product metafield custom.specs (multi-line text,
+  one "Label: value" per line). Renders nothing when the metafield is empty.
+{%- endcomment -%}
+{%- assign specs = closest.product.metafields.custom.specs.value -%}
+{%- if specs != blank -%}
+  <div class="product-specs" {{ block.shopify_attributes }}>
+    <h3 class="h5">Specs</h3>
+    <ul class="product-specs__list">
+      {%- assign lines = specs | newline_to_br | split: '<br />' -%}
+      {%- for line in lines -%}
+        {%- assign line = line | strip -%}
+        {%- if line != blank -%}
+          {%- assign parts = line | split: ': ' -%}
+          {%- if parts.size > 1 -%}
+            <li><strong>{{ parts[0] }}:</strong> {{ parts | slice: 1, 10 | join: ': ' }}</li>
+          {%- else -%}
+            <li>{{ line }}</li>
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+  .product-specs__list { margin: 0; padding-left: 1.2em; }
+  .product-specs__list li { margin: 0.2em 0; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Product specs",
+  "tag": null,
+  "settings": [],
+  "presets": [{ "name": "Product specs" }]
+}
+{% endschema %}
