@@ -55,7 +55,30 @@
         {{- 'icon-checkmark.svg' | inline_asset_content -}}
         {{- 'blocks.contact_form.post_success' | t -}}
       </div>
+      <script>
+        try { localStorage.setItem('qf-contact-last-sent', String(Date.now())); } catch (e) {}
+        window.location.replace('{{ routes.root_url | append: '/pages/thank-you' | replace: '//', '/' }}');
+      </script>
     {%- endif -%}
+
+    <p class="contact-form__throttle" id="{{ form_id }}-throttle" hidden role="alert">
+      Thanks! We already received a message from you within the last hour. Please wait before sending another, or email us at info@qfamilymagicshop.com.
+    </p>
+    <script>
+      (function () {
+        var form = document.getElementById('{{ form_id }}');
+        var note = document.getElementById('{{ form_id }}-throttle');
+        if (!form) return;
+        form.addEventListener('submit', function (event) {
+          var last = 0;
+          try { last = parseInt(localStorage.getItem('qf-contact-last-sent') || '0', 10); } catch (e) {}
+          if (last && Date.now() - last < 3600000) {
+            event.preventDefault();
+            if (note) { note.hidden = false; note.focus && note.focus(); }
+          }
+        });
+      })();
+    </script>
 
     <div class="contact-form__form-row">
       <label
