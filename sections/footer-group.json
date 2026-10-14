@@ -58,7 +58,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Welcome to Q Family Magic Shop!</p><p>Whether you're picking up your very first card trick or perfecting a stage illusion that's fooled thousands, you've found your home. At Q Family Magic Shop, we believe magic belongs to everyone — from curious beginners taking their first steps into the impossible, to seasoned performers who live for the gasps and applause.</p><p>We're passionate about the art of magic and proud to carry a wide range of tricks, props, and supplies for every skill level. Browse, learn, and let the wonder begin.</p>",
+                "text": "<p>Welcome to Q Family Magic Shop!</p><p>Whether you're picking up your very first card trick or perfecting a stage illusion that's fooled thousands, you've found your home. At Q Family Magic Shop, we believe magic belongs to everyone — from curious beginners taking their first steps into the impossible, to seasoned performers who live for the gasps and applause.</p><p>We're passionate about the art of magic and proud to carry a wide range of tricks, props, and supplies for every skill level. Browse, learn, and let the wonder begin.</p><p><strong>Contact us:</strong> <a href=\"tel:+17189740806\">(718) 974-0806</a> · <a href=\"mailto:info@qfamilymagicshop.com\">info@qfamilymagicshop.com</a> · <a href=\"/pages/contact\">Contact form</a></p>",
                 "width": "100%",
                 "max_width": "narrow",
                 "alignment": "left",
